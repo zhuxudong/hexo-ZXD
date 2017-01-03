@@ -27,8 +27,8 @@ sidebar:
    href: javascript:;
    icon: qq
 
-
-
+# the amount of latest posts you want to show
+latest_amount: 5
 # if you want close the 'theme by' in footer ,you can choose the copyright to the false;
 copyright: ture
 

@@ -1,21 +1,35 @@
-<section>
-  <% if(site.posts.length == 0){ %>
-  <span><%- __('archives.er') %></span>
-  <% }else{var num = site.posts.length %>
-  <span><%- __('archives.now', num) %></span>
-  <% var year = null; %>
-  <div class="archives-wrapper">
-    <% site.posts.each(function(post){ %>
-    <% if(post.date.year() != year){
-      year = post.date.year(); %>
-    <h1 class="archives-header">
-      <%- year %>
-    </h1>
-    <% } %>
-    <a class="archives-item" href="<%- url_for(post.path)%>">
-      <%- post.title %> <%- date(post.date) %>
-    </a><br>
-  <% }) %>
+<section class="archives">
+  <% if(site.posts.length === 0){ %>
+  <span class="nothing"><%- __('archives.er') %></span>
+  <% }else{ %>
+  <div class="col-xs-12 col-md-6">
+    <div class="article ">
+      <div class="article-title">
+        <h3><%- __("archives.latest") %></h3>
+        <% page.posts.each(function(post, index){ %>
+        <% if(index < theme.latest_amount){ %>
+        <a class="article-body" href="<%- url_for(post.path) %>">
+          <span><%- post.title %></span>
+          <span class="archives-date"><%- date(post.date, config.date_format) %></span>
+        </a>
+        <% } %>
+        <% }) %>
+      </div>
+    </div>
   </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="article ">
+      <div class="article-title">
+        <h3><%- __("archives.all",page.posts.length) %></h3>
+        <% page.posts.each(function(post){ %>
+        <a class="article-body" href="<%- url_for(post.path) %>">
+          <span><%- post.title %></span>
+          <span class="archives-date"><%- date(post.date, config.date_format) %></span>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+
   <% } %>
 </section>

@@ -10,7 +10,7 @@
   position: relative;
   left: 0;
   top: 0;
-  padding: 0 15px;
+  padding: 0 15px 15px;
   margin: 25px auto;
   background: $cat-lighter;
   border-radius: $border-radius-base;
@@ -35,9 +35,12 @@
     display: inline-block;
     text-align: left;
   }
+  .article-meta{display:block;}
 }
 
 .article-body {
+  display:block;
+  margin-bottom:10px;
   @extend %clearfix;
 }
 
