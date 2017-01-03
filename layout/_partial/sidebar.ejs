@@ -1,0 +1,20 @@
+<a id="rocket" class=" rocketBottom fa fa-rocket fa-2x  hide animation-rocket" href="#"></a>
+<a id="sidebarToggle" href="#" class="fa fa-angle-double-left fa-2x " ></a>
+<aside class="zxd-sidebar sidebarstyle translateX " id="sidebar">
+  <div class="intro">
+    <img src="<%- url_for(theme.avatar) %>" alt="avatar">
+    <span><%- config.author %></span>
+    <span><%- config.description %></span>
+  </div>
+  <div class="wrapper">
+    <div class="contact">
+      <% for(var item in theme.sidebar){ %>
+      <a href="<%- theme.sidebar[item].href %>"><span class="fa fa-<%- theme.sidebar[item].icon %>"></span>
+        &nbsp; <span><%- item %></span></a>
+      <% } %>
+    </div>
+  </div>
+  <div class="recent col-xs-12 col-sm-6 col-sm-offset-3">
+    <%- tagcloud({min_font: 16, max_font: 30}) %>
+  </div>
+</aside>

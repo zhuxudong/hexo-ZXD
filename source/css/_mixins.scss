@@ -1,0 +1,89 @@
+//clearfix
+%clearfix {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    @extend :before;
+    clear: both;
+  }
+}
+
+%col-relative{
+  position:relative;
+  min-height:1em;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+
+@mixin make-col() {
+    @for $index from 1 through 12 {
+
+      .col-xs-#{$index} {
+        float:left;
+        width: percentage($index/12);
+      }
+      .col-xs-offset-#{$index}{
+        left: percentage($index/12);
+      }
+      .col-xs-#{$index},.col-sm-#{$index},.col-md-#{$index},.col-lg-#{$index}{
+       @extend %col-relative;
+      }
+    }
+  @media screen and(min-width: 768px) {
+    %col-float {
+      float:left;
+    }
+    @for $index from 1 through 12 {
+      .col-sm-#{$index} {
+        @extend %col-float;
+        width: percentage($index/12);
+      }
+      .col-sm-offset-#{$index}{
+        left: percentage($index/12);
+      }
+    }
+  }
+
+  @media screen and(min-width:992px) {
+    %col-float2 {
+      float:left;
+    }
+    @for $index from 1 through 12 {
+      .col-md-#{$index} {
+        @extend %col-float2;
+        width: percentage($index/12);
+      }
+      .col-md-offset-#{$index}{
+        left: percentage($index/12);
+      }
+    }
+  }
+
+  @media screen and(min-width: 1200px) {
+    %col-float3{
+      float:left;
+    }
+    @for $index from 1 through 12 {
+      .col-lg-#{$index} {
+        @extend %col-float3;
+        width: percentage($index/12);
+      }
+      .col-lg-offset-#{$index}{
+        left: percentage($index/12);
+      }
+    }
+  }
+}
+//border
+@mixin make-border($border-width:$border-width-base,$border-style:solid,$border-color:$border-color-meta){
+    border:$border-width $border-style $border-color;
+}
+
+@mixin colHidden($min-width,$max-width){
+  @media (min-width:#{$min-width})and(max-width:#{$max-width}){
+    @content;
+  }
+}

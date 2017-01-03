@@ -1,0 +1,120 @@
+//color
+$gray-darker:                 #373a3c !default;
+$gray-dark:                      #55595c !default;
+$gray:                #818a91 !default;
+$gray-light:              #eceeef !default;
+$gray-lighter:             #f7f7f9 !default;
+
+$brand-primary:             #0275d8 !default;
+$brand-success:             #5cb85c !default;
+$brand-info:                #5bc0de !default;
+$brand-warning:             #f0ad4e !default;
+$brand-danger:              #d9534f !default;
+$brand-inverse:             $gray-dark !default;
+
+$cat-darker:                 #3f373c;
+$cat-dark:                   #6b5545;
+$cat:                        #bda492;
+$cat-light:                  #dcd9d4;
+$cat-lighter:                #f2efe8;
+
+
+//button
+
+
+//headding
+$headings-margin-bottom: 1em  !default;
+$headings-font-family:   inherit !default;
+$headings-font-weight:   500 !default;
+$headings-line-height:   1.1 !default;
+$headings-color:         inherit !default;
+
+
+//font-family
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
+
+$font-family-sidebar:    -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+$font-family-code:       $font-family-monospace;
+
+//size
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default;
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   .875rem !default;
+$font-size-xs:   .75rem !default;
+
+$font-size-h1: 2.5rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.75rem !default;
+$font-size-h4: 1.5rem !default;
+$font-size-h5: 1.25rem !default;
+$font-size-h6: 1rem !default;
+
+$line-height-base: 1.4 !default;
+$border-width-base: 1px;
+$border-radius-base: 1rem;
+$border-color-meta:       $cat-light;
+
+
+//body
+
+$body-bg:    #fff !default;
+$body-color: $cat-dark !default;
+
+
+// Links
+$link-color:            $cat-darker!default;
+$link-decoration:       none !default;
+$link-hover-color:      $cat  !default;
+$link-hover-decoration: none !default;
+
+//sidebar
+$sidebar-bg:            $cat-darker;
+$sidebar-color:         $cat-lighter;
+$sidebar-link-color:    $cat-light;
+$sidebar-link-hover-color:    $cat;
+
+//card
+$card-header-bg:         $cat-light;
+$card-header-color:      $cat-dark;
+$card-body-bg:         $cat-light;
+$card-body-color:      $cat-dark;
+$card-body-max-height:   10em !default;
+$card-footer-bg:         $cat-light;
+$card-footer-color:      $cat-dark;
+
+//code
+
+$code-font-size:              90% !default;
+$code-padding-x:              .4rem !default;
+$code-padding-y:              .2rem !default;
+$code-color:                  #bababa !default;
+$code-bg:                     #2b2b2b !default;
+
+
+$kbd-color:                   #fff !default;
+$kbd-bg:                      #333 !default;
+$code-color-s1:               #dd1144  !default;
+$pre-bg:                     #313335 !default;
+$pre-color:                  #606366  !default;
+$pre-border-color:            #ccc !default;
+$pre-scrollable-max-height:   340px !default;
+
+
+// Tables
+$table-cell-padding:            .75rem !default;
+$table-sm-cell-padding:         .3rem !default;
+
+$table-bg:                      transparent !default;
+$table-bg-accent:               rgba(0,0,0,.05) !default;
+$table-bg-hover:                rgba(0,0,0,.075) !default;
+$table-bg-active:               $table-bg-hover !default;
+
+$text-muted: $gray-lighter !default;
+
+$table-border-width:            $border-width-base !default;
+$table-border-color:            $gray-lighter !default;
+

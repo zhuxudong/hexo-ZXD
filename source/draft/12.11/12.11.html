@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<button style="position:fixed;top:50%;">按一下，body的height主动增加100px <br>
+	<span></span></button>
+	<button style="position:fixed;top:70%;">按一下，增加一个div，body被动增加height <br>
+	<span></span></button>
+		<div id="div" style="background:red;height:50%;width:50%;margin:0 auto;text-align:center">
+			outer:height:50%
+			<div style="width:50%;height:50%;background:lightgreen;margin:0 auto">inner:height:50%</div>
+		</div>
+
+</body>
+<script>
+		var i=0;
+		var height=getComputedStyle(document.body).height;
+		var span=document.querySelector("span");
+		span.innerHTML=height?height:0+"px";
+		document.querySelector("button").onclick=function(){
+			height=parseFloat(height?height:0)+100+"px";
+			document.body.style.height=height;
+			span.innerHTML=height;
+
+	}
+	document.querySelector("button:not(:first-child):not(:last-child)").onclick=function(){
+		console.log(1)
+			var div=document.createElement("div");
+			div.style.height="100px";
+			div.style.width="50%";
+			div.style.background="green";
+			div.innerHTML="div"+i++;
+			var span=document.querySelector("button:not(:last-child):not(:first-child)").children[1];
+			span.innerHTML=getComputedStyle(document.body).height;
+				document.querySelector("div").appendChild(div);
+
+	}
+</script>
+</html>

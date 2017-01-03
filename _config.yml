@@ -1,0 +1,42 @@
+
+# html lang
+language: en
+keywords: hexo theme,ZXD
+# main menu navigation
+menu:
+  home: /
+  archives: archives/
+  tags: tags/
+  categories: categories/
+  about: about/
+  # Contact: /contact/
+
+# Miscelaneous
+favicon: favicon.ico
+
+# author's image
+avatar: /img/avatar.png
+
+
+#Contact in sidebar
+sidebar:
+  GitHub:
+   href: https://github.com/zhuxudong/zhuxudong.github.io
+   icon: github
+  QQ:
+   href: javascript:;
+   icon: qq
+
+
+
+# if you want close the 'theme by' in footer ,you can choose the copyright to the false;
+copyright: ture
+
+#if you want open the updated timemeta in post,you can change it to 'true'
+updated: false
+
+
+#the file rootpath
+img: /img
+js: /js
+css: /css

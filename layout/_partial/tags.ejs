@@ -1,0 +1,7 @@
+<section >
+  <% if (is_tag()){ %>
+    <%- partial('_partial/article')%>
+  <% }else if(is_category()){ %>
+  <%- partial('_partial/article')%>
+  <% } %>
+</section>

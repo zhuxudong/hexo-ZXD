@@ -1,0 +1,21 @@
+<section>
+  <% if(site.posts.length == 0){ %>
+  <span><%- __('archives.er') %></span>
+  <% }else{var num = site.posts.length %>
+  <span><%- __('archives.now', num) %></span>
+  <% var year = null; %>
+  <div class="archives-wrapper">
+    <% site.posts.each(function(post){ %>
+    <% if(post.date.year() != year){
+      year = post.date.year(); %>
+    <h1 class="archives-header">
+      <%- year %>
+    </h1>
+    <% } %>
+    <a class="archives-item" href="<%- url_for(post.path)%>">
+      <%- post.title %> <%- date(post.date) %>
+    </a><br>
+  <% }) %>
+  </div>
+  <% } %>
+</section>

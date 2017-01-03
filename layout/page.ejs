@@ -1,0 +1,59 @@
+<%- partial('_partial/head') %>
+<%- partial('_partial/header') %>
+<main class="main">
+  <div class="container">
+    <% if(page.type == "tags"){ %>
+    <section class="col-xs-12 col-md-10 col-md-offset-1">
+      <% if(site.tags.length == 0){ %>
+      <h3 style="text-align:center;margin-top:100px"><%- __('nothing') %></h3>
+      <% } %>
+      <% site.tags.each(function(tag){ %>
+      <a class="tagcloud" href="<%- url_for(tag.path) %>">
+        <div class="article animation ">
+          <h3 class="article-title"><%- tag.name %></h3>
+          <div class="article-body">
+            <% if(tag.length == 1){ %>
+            <h4><%- tag.length %></h4>
+            <% }else{ %>
+            <h1><%- tag.length %></h1>
+            <% } %>
+            <span><%- __('posts') %></span>
+          </div>
+        </div>
+      </a>
+      <% }) %>
+    </section>
+    <% } else if(page.type == "categories"){ %>
+    <% if(site.categories.length == 0){ %>
+    <h3 style="text-align:center;margin-top:100px"><%- __('nothing') %></h3>
+    <% } %>
+    <section class="col-xs-12 col-md-10 col-md-offset-1">
+      <% site.categories.each(function(category){ %>
+      <a class="tagcloud" href="<%- url_for(category.path) %>">
+        <div class="article animation ">
+          <h3 class="article-title"><%- category.name %></h3>
+          <div class="article-body">
+            <% if(category.length == 1){ %>
+            <h4><%- category.length %></h4>
+            <% }else{ %>
+            <h1><%- category.length %></h1>
+            <% } %>
+            <span><%- __('posts') %></span>
+          </div>
+        </div>
+      </a>
+      <% }) %>
+    </section>
+    <% }else if(page.type == "about") { %>
+    <!--about page-->
+    <%- partial("_partial/about") %>
+    <% }else{ %>
+    <div class="others">
+      <%- partial("_partial/article") %>
+    </div>
+    <% } %>
+  </div>
+  <%- partial('_partial/sidebar') %>
+</main>
+<%- partial('_partial/footer') %>
+<%- partial('_partial/foot') %>

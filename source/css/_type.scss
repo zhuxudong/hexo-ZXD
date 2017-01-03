@@ -1,0 +1,80 @@
+//wrapper
+.main{
+  position:relative;
+  min-height:500px;
+  @extend %clearfix;
+}
+.container{
+  margin:0 auto;
+  padding-left:15px;
+  padding-right:15px;
+  @extend %clearfix;
+  @media (min-width:768px){
+    width:750px;
+  }
+  @media (min-width:992px){
+    width:970px;
+  }
+  @media (min-width:1200px){
+    width:1170px;
+  }
+}
+.row{
+  position:relative;
+  margin-left:-15px;
+  margin-right:-15px;
+  @extend %clearfix;
+}
+
+@include make-col();
+.col-xs-hidden{display:none}
+
+@include colHidden(0,767px){
+  .hidden-xs{display:none}
+}
+@include colHidden(768px,991px){
+  .hidden-sm{display:none}
+}
+@include colHidden(992px,1199px){
+  .hidden-md{display:none}
+}
+@include colHidden(1200px,2000px){
+  .hidden-lg{display:none}
+}
+
+
+//animation
+.close{
+  position:absolute;
+  right:1em;
+  top:1em;
+}
+.hide{
+  display:none !important;
+}
+.animation{
+  transition: all .5s ;
+}
+.animation-rocket{
+ transition:bottom 1s ease-out ;
+
+}
+.rotate{
+  transform:  rotate(180deg);
+}
+.translateX{
+  transform:translateX(100%);
+}
+.noscroll{
+  overflow:hidden;
+}
+.rocketBottom{
+  bottom:5px;
+}
+
+.rocketTop{
+  bottom:100%;
+}
+
+//color
+.color-white{color:$cat-lighter;}

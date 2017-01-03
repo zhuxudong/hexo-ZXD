@@ -1,0 +1,16 @@
+<div class="article-meta">
+  <span class="fa fa-calendar"></span>
+  <%- __('postedBy') %>
+  <time datetime="<%- article.date %>">
+    <%- date(article.date, config.date_format) %>
+  </time>
+</div>
+<% if (theme.updated){ %>
+<div class="article-meta">
+  <span class="fa fa-calendar-plus-o"></span>
+  <%- __('updatedBy') %>
+  <time datetime="<%- article.updated %>">
+    <%- date(article.updated, config.date_format) %>
+  </time>
+</div>
+<% } %>
