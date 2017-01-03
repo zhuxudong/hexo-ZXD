@@ -7,9 +7,8 @@ menu:
   home: /
   archives: archives/
   tags: tags/
-  categories: categories/
+  # categories: categories/
   about: about/
-  # Contact: /contact/
 
 # Miscelaneous
 favicon: favicon.ico
@@ -23,9 +22,9 @@ sidebar:
   GitHub:
    href: https://github.com/zhuxudong/zhuxudong.github.io
    icon: github
-  QQ:
-   href: javascript:;
-   icon: qq
+  源码:
+   href: https://github.com/zhuxudong/hexo-ZXD
+   icon: github
 
 # the amount of latest posts you want to show
 latest_amount: 5
