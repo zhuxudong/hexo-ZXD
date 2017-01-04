@@ -1,14 +1,22 @@
-
 # html lang
 language: en
 keywords: hexo theme,ZXD
 # main menu navigation
+
+#所有评论的总开关
+commets: true
+
+#如果需要开启有言，输入您的有言ID
+youyanid: 2123180
+
 menu:
   home: /
   archives: archives/
   tags: tags/
   # categories: categories/
   about: about/
+  # 如果你想自定义页面，可以在这里加上你的path，然后hexo new page
+  # custom: custom/
 
 # Miscelaneous
 favicon: favicon.ico

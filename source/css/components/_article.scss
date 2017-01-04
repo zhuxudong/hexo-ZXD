@@ -16,7 +16,7 @@
   border-radius: $border-radius-base;
   box-shadow: 0 0 15px $cat-dark;
   border: $border-width-base solid $border-color-meta;
-  .article-img,img {
+  .article-img , img {
     max-width: 100%;
     vertical-align: middle;
     margin: 5px auto;
@@ -55,13 +55,6 @@
   }
 
 }
-
-//
-//.readmore {
-//  display: inline-block;
-//  padding: 5px 15px;
-//  font-size: $font-size-lg;
-//}
 
 .paginator {
   display: block;

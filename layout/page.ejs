@@ -44,13 +44,9 @@
       </a>
       <% }) %>
     </section>
-    <% }else if(page.type == "about") { %>
-    <!--about page-->
-    <%- partial("_partial/about") %>
-    <% }else{ %>
-    <div class="others">
+  <%}else{ %>
+    <!--custom page-->
       <%- partial("_partial/article") %>
-    </div>
     <% } %>
   </div>
   <%- partial('_partial/sidebar') %>

@@ -497,8 +497,7 @@ samp {
 code {
   font-size: 90%;
   color: #bababa;
-  background-color: #2b2b2b;
-  border-radius: 1rem; }
+  background-color: #2b2b2b; }
 
 kbd {
   font-size: 90%;
@@ -522,39 +521,6 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.highlight, pre {
-  margin: 0 0 1em 0;
-  background: #2b2b2b;
-  overflow: auto; }
-  .highlight td, pre td {
-    vertical-align: top; }
-  .highlight .gutter pre, pre .gutter pre {
-    text-align: center;
-    padding: 0 10px;
-    background: #313335;
-    color: #606366;
-    margin-bottom: 0; }
-  .highlight .code pre, .highlight code, pre .code pre, pre code {
-    margin-bottom: 0;
-    color: #bababa; }
-  .highlight code .c1, pre code .c1 {
-    font-style: italic; }
-  .highlight code .kd, pre code .kd {
-    font-weight: bold; }
-  .highlight code .s1, pre code .s1 {
-    color: #dd1144; }
-
-blockquote {
-  margin: 20px 0;
-  padding: 10px 20px;
-  font: italic 500 0.95em -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
-  color: gray; }
-  blockquote:before, blockquote.main:after, blockquote.container:after, blockquote.row:after, blockquote.footer:after, blockquote.article:after, blockquote.article-body:after {
-    content: " \"";
-    position: relative;
-    left: -15px;
-    font-size: 2em; }
-
 .footer {
   margin-top: 25px;
   padding: 10px 0 10px; }
@@ -577,8 +543,7 @@ blockquote {
   top: 0;
   width: 100%;
   padding: 0 15px;
-  height: 50px;
-  text-align: center; }
+  height: 50px; }
   .zxd-navbar a {
     display: inline-block;
     padding: 15px 15px;
@@ -591,29 +556,32 @@ blockquote {
   .zxd-navbar > .navbar-header {
     float: left; }
     .zxd-navbar > .navbar-header > .navbar-brand {
-      font-size: 2.5rem;
       font-weight: 500; }
   .zxd-navbar .navbar-collapse {
     height: 50px;
     float: right;
     font-weight: 500; }
 
+.article.animation:hover {
+  left: -5px;
+  top: -5px;
+  box-shadow: 5px 5px 15px #6b5545; }
+
 .article {
   transition: all .3s linear;
   position: relative;
   left: 0;
   top: 0;
-  padding: 0 15px;
+  padding: 0 15px 15px;
   margin: 25px auto;
   background: #f2efe8;
   border-radius: 1rem;
   box-shadow: 0 0 15px #6b5545;
   border: 1px solid #dcd9d4; }
-
-.article.animation:hover {
-  left: -5px;
-  top: -5px;
-  box-shadow: 5px 5px 15px #6b5545; }
+  .article .article-img, .article img {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 5px auto; }
 
 .article-header {
   display: block;
@@ -624,15 +592,18 @@ blockquote {
   .article-header .wrapper {
     display: inline-block;
     text-align: left; }
-  .article-header .article-img {
-    max-width: 100%;
-    vertical-align: middle;
-    margin: 5px auto; }
+  .article-header .article-meta {
+    display: block; }
+
+.article-body {
+  display: block;
+  margin-bottom: 10px; }
 
 .article-footer {
-  margin-bottom: 20px; }
+  margin-top: 50px;
+  margin-bottom: 10px; }
   .article-footer .tag-link {
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
   .article-footer .readmore {
     font-size: 1.75rem; }
 
@@ -669,6 +640,54 @@ blockquote {
     .paginator .page-number.current {
       background: #fff;
       color: #6b5545; }
+
+.highlight, pre {
+  margin: 0 0 1em 0;
+  background: #2b2b2b;
+  overflow: auto; }
+  .highlight td, pre td {
+    border: none;
+    padding: 0; }
+  .highlight td, pre td {
+    vertical-align: top; }
+  .highlight .gutter pre, pre .gutter pre {
+    text-align: center;
+    padding: 0 10px;
+    background: #313335;
+    color: #606366;
+    margin-bottom: 0; }
+  .highlight .code pre, .highlight code, pre .code pre, pre code {
+    margin-bottom: 0;
+    color: #bababa; }
+  .highlight code, pre code {
+    padding-left: 15px; }
+    .highlight code .c1, pre code .c1 {
+      font-style: italic; }
+    .highlight code .kd, pre code .kd {
+      font-weight: bold; }
+    .highlight code .s1, pre code .s1 {
+      color: #dd1144; }
+
+blockquote {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font: italic 500 0.95em -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  color: gray; }
+  blockquote:before, blockquote.main:after, blockquote.container:after, blockquote.row:after, blockquote.footer:after, blockquote.article:after, blockquote.article-body:after {
+    content: " \"";
+    position: relative;
+    left: -15px;
+    font-size: 2em; }
+
+em {
+  font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+  table td {
+    padding: 15px;
+    border: 2px solid #dcd9d4; }
 
 .btn {
   display: inline-block;
@@ -775,6 +794,8 @@ blockquote {
   bottom: 0;
   padding: 20px 10px;
   text-align: center; }
+  .zxd-sidebar .intro .author {
+    font-weight: 800; }
   .zxd-sidebar .intro img {
     max-width: 50%; }
   .zxd-sidebar .intro span {
@@ -782,17 +803,31 @@ blockquote {
     display: block; }
   .zxd-sidebar .contact {
     display: inline-block;
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 20px; }
     .zxd-sidebar .contact a {
       display: block;
-      margin-bottom: 3px; }
+      margin-bottom: 3px;
+      border-bottom-style: solid;
+      border-bottom-width: 1px; }
   .zxd-sidebar .recent a {
     display: inline-block;
     padding: 0 15px;
-    margin: 0 1em 1em 1em;
+    margin: 0 1rem 1rem 1rem;
     line-height: 30px;
     border-width: 1.5px;
     border-style: solid;
     border-radius: 1rem; }
+
+.archives-date {
+  float: right; }
+
+.archives .nothing {
+  position: absolute;
+  width: 50%;
+  display: block;
+  text-align: center;
+  top: 50%;
+  left: 25%; }
 
 /*# sourceMappingURL=main.css.map */
