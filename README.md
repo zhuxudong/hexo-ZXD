@@ -15,11 +15,11 @@
 <br>   
 ### hexo-ZXD 采用响应式设计，在手机，平板，PC上都有响应式的变化。
 PC
-![markdown](source/img/markdown-1.png)
+![markdown](//zhuxudong.cn/img/markdown-1.png)
 平板
-![markdown](source/img/markdown-2.png)
+![markdown](//zhuxudong.cn/img/markdown-2.png)
 手机
-![markdown](source/img/markdown-3.png)
+![markdown](//zhuxudong.cn/img/markdown-3.png)
 
 ### hexo-ZXD的完整front-matter
 * layout	布局，一般不用设置，默认post布局
