@@ -15,11 +15,11 @@
 <br>   
 ### hexo-ZXD 采用响应式设计，在手机，平板，PC上都有响应式的变化。
 PC
-![markdown](//zhuxudong.cn/img/markdown-1.png)
+![markdown](http://zhuxudong.cn/img/markdown-1.png)
 平板
-![markdown](//zhuxudong.cn/img/markdown-2.png)
+![markdown](http://zhuxudong.cn/img/markdown-2.png)
 手机
-![markdown](//zhuxudong.cn/img/markdown-3.png)
+![markdown](http://zhuxudong.cn/img/markdown-3.png)
 
 ### hexo-ZXD的完整front-matter
 * layout	布局，一般不用设置，默认post布局
@@ -32,7 +32,7 @@ PC
 * comments	决定当前页面是否开启评论功能	需要开启设置为true
 
 ### hexo-ZXD的markdown样式
-[参考上一篇测试文章](//zhuxudong.cn/2017/01/03/test/)
+[参考上一篇测试文章](http://zhuxudong.cn/2017/01/03/test/)
 
 ### 下载hexo-ZXD
 * [git clone https://github.com/zhuxudong/hexo-ZXD](https://github.com/zhuxudong/hexo-ZXD)
