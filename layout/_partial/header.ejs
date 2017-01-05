@@ -1,20 +1,20 @@
-<header class="header-wrapper">
-  <img class="header-img" src="/img/cat-1.jpg"></img>
+<header class="header-wrapper ">
+  <img class="header-img " src="/img/cat-1.jpg"></img>
   <nav class="zxd-navbar ">
     <div class="navbar-header">
-        <a  class="animation navbar-brand" href="<%- config.root%>">
-          <span class="fa fa-home "></span>
+        <a  class="navbar-brand " href="<%- config.root%>">
           <%- config.title %>
         </a>
-      <!--<a class="navbar-toggle">-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-      <!--</a>-->
+      <a class="navbar-toggle" id="navbarToggle" href="#navbarCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
     </div>
-    <div class="navbar-collapse">
+    <div class=" navbar-collapse collapse-xs noscroll " id="navbarCollapse">
           <% for(var menuName in theme.menu){ %>
-          <a  class="animation" href="<%- url_for(theme.menu[menuName]) %>"><%= __('menu.'+menuName) %> </a>
+          <a   href="<%- url_for(theme.menu[menuName]) %>"><%= __('menu.'+menuName) %> </a>
           <% } %>
     </div>
   </nav>

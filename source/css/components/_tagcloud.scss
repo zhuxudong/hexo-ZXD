@@ -1,4 +1,7 @@
-.tagcloud {
+.tagcloud{
+  text-align:center;
+}
+.tagcloud-item {
   display: inline-block;
   margin-right: 20px;
   vertical-align: middle;
@@ -10,7 +13,7 @@
     text-overflow: ellipsis;
   }
   .article {
-    width: 200px;
+    width: 150px;
     height: 150px;
   }
   .article-body{

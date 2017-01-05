@@ -32,6 +32,10 @@ h6, .h6 {
   font-size: $font-size-h6;
 }
 
+::selection{
+  background:$cat-darker;
+  color:$cat-lighter;
+}
 html {
   box-sizing: border-box;
   font-size: $font-size-root;

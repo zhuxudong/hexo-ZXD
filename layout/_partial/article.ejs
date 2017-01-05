@@ -11,10 +11,8 @@
           </h1>
         </a>
         <% } %>
-        <div class="row">
-          <div class="wrapper">
-            <%- partial('_partial/article-meta', {article: article}) %>
-          </div>
+        <div class="wrapper">
+          <%- partial('_partial/article-meta', {article: article}) %>
         </div>
         <% if(article.photos.length){ %>
         <% article.photos.forEach(function(pic){ %>
@@ -37,7 +35,7 @@
         <% }) %>
         <br>
         <a class="  animation readmore" href="<%- url_for(article.path) %>"><%- __('readMore') %>
-          <img src="<%- url_for(theme.img)%>/pointer.gif"></img>
+          <img src="<%- url_for(theme.img) %>/pointer.gif"></img>
         </a>
       </div>
       <% } %>
@@ -58,12 +56,10 @@
         <h1 class="article-title">
           <%- page.title %>
         </h1>
-        <div class="row">
-          <div class="wrapper">
-            <%- partial("_partial/article-meta", {article: page}) %>
-          </div>
+        <div class="wrapper">
+          <%- partial("_partial/article-meta", {article: page}) %>
         </div>
-        <% if(is_post()&&page.photos.length){ %>
+        <% if(is_post() && page.photos.length){ %>
         <% page.photos.forEach(function(pic){ %>
         <img class="article-img" src="<%- url_for(pic) %>" alt="article-img">
         <% }) %>
@@ -87,10 +83,10 @@
     </article>
   </div>
   <!-- UY BEGIN -->
-  <%if(theme.commets&&page.commets){%>
-    <div id="uyan_frame" class="col-xs-12 col-md-10 col-md-offset-1"></div>
-  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=<%- theme.youyanid%>"></script>
+  <% if(theme.commets && page.commets){ %>
+  <div id="uyan_frame" class="col-xs-12 col-md-10 col-md-offset-1"></div>
+  <script type="text/javascript" src="//v2.uyan.cc/code/uyan.js?uid=<%- theme.youyanid %>"></script>
   <!-- UY END -->
-  <%}%>
+  <% } %>
   <% } %>
 </div>

@@ -14,30 +14,76 @@
   top: 0;
   width: 100%;
   padding: 0 15px;
-  height: 50px;
+
   a {
     display: inline-block;
     padding: 15px 15px;
     line-height: 20px;
-    font-size: $font-size-h3;
     color: $cat-lighter;
+    font-size: $font-size-h3;
     text-decoration: none;
     &:hover {
       color: $cat-darker;
     }
-  }
-  > .navbar-header {
-    float: left;
-    > .navbar-brand {
-      font-weight: 500;
+    @media (max-width: 767px) {
+      font-size: $font-size-lg;
     }
   }
-  .navbar-collapse {
-    height: 50px;
-    float: right;
-    font-weight: 500;
-  }
-  @media screen and(max-width: 992px) {
+  > .navbar-header {
+    @extend %clearfix;
+    @media (min-width: 768px) {
+      float: left;
+    }
+    > .navbar-brand {
+      font-weight: bold;
 
+    }
+
+    > .navbar-toggle {
+      float: right;
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
   }
+  .icon-bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 3px;
+  }
+
+  > .navbar-collapse {
+    font-weight: 500;
+    float: right;
+    @media(max-width: 767px) {
+      position: absolute;
+      top: 35px;
+      right: 55px;
+      background: $cat-lighter;
+      box-shadow: 0 0 15px $cat-lighter;
+      border-radius: 10px;
+      a {
+        display: block;
+        padding: 6px 15px;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $cat-darker;
+        &:hover {
+          color: $cat-lighter;
+          background: $cat-darker;
+        }
+      }
+    }
+  }
+
 }
+
+@media screen and(max-width: 992px) {
+
+}
+

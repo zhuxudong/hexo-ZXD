@@ -1,7 +1,7 @@
-.main:after, .container:after, .row:after, .footer:after, .article:after, .article-body:after, .main:before, .container:before, .row:before, .footer:before, .article:before, .article-body:before {
+.main:after, .container:after, .row:after, .footer:after, .zxd-navbar > .navbar-header:after, .article:after, .article-body:after, .main:before, .container:before, .row:before, .footer:before, .zxd-navbar > .navbar-header:before, .article:before, .article-body:before {
   content: "";
   display: table; }
-.main:after, .container:after, .row:after, .footer:after, .article:after, .article-body:after {
+.main:after, .container:after, .row:after, .footer:after, .zxd-navbar > .navbar-header:after, .article:after, .article-body:after {
   clear: both; }
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
@@ -34,6 +34,10 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem; }
+
+::selection {
+  background: #3f373c;
+  color: #f2efe8; }
 
 html {
   box-sizing: border-box;
@@ -456,19 +460,26 @@ th {
 @media (min-width: 1200px) and (max-width: 2000px) {
   .hidden-lg {
     display: none; } }
+.animation {
+  transition: all 1s; }
+
+.animation-rocket {
+  transition: bottom 1s ease-out; }
+
 .close {
   position: absolute;
   right: 1em;
   top: 1em; }
 
+.fade {
+  opacity: 0; }
+
 .hide {
-  display: none !important; }
+  display: none; }
 
-.animation {
-  transition: all 0.5s; }
-
-.animation-rocket {
-  transition: bottom 1s ease-out; }
+@media (max-width: 767px) {
+  .collapse-xs {
+    display: none; } }
 
 .rotate {
   transform: rotate(180deg); }
@@ -542,25 +553,58 @@ pre {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 0 15px;
-  height: 50px; }
+  padding: 0 15px; }
   .zxd-navbar a {
     display: inline-block;
     padding: 15px 15px;
     line-height: 20px;
-    font-size: 1.75rem;
     color: #f2efe8;
+    font-size: 1.75rem;
     text-decoration: none; }
     .zxd-navbar a:hover {
       color: #3f373c; }
-  .zxd-navbar > .navbar-header {
-    float: left; }
-    .zxd-navbar > .navbar-header > .navbar-brand {
-      font-weight: 500; }
-  .zxd-navbar .navbar-collapse {
-    height: 50px;
-    float: right;
-    font-weight: 500; }
+    @media (max-width: 767px) {
+      .zxd-navbar a {
+        font-size: 1.25rem; } }
+  @media (min-width: 768px) {
+    .zxd-navbar > .navbar-header {
+      float: left; } }
+  .zxd-navbar > .navbar-header > .navbar-brand {
+    font-weight: bold; }
+  .zxd-navbar > .navbar-header > .navbar-toggle {
+    float: right; }
+    @media (min-width: 768px) {
+      .zxd-navbar > .navbar-header > .navbar-toggle {
+        display: none; } }
+  .zxd-navbar .icon-bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 3px; }
+  .zxd-navbar > .navbar-collapse {
+    font-weight: 500;
+    float: right; }
+    @media (max-width: 767px) {
+      .zxd-navbar > .navbar-collapse {
+        position: absolute;
+        top: 35px;
+        right: 55px;
+        background: #f2efe8;
+        box-shadow: 0 0 15px #f2efe8;
+        border-radius: 10px; }
+        .zxd-navbar > .navbar-collapse a {
+          display: block;
+          padding: 6px 15px;
+          text-align: center;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: #3f373c; }
+          .zxd-navbar > .navbar-collapse a:hover {
+            color: #f2efe8;
+            background: #3f373c; } }
 
 .article.animation:hover {
   left: -5px;
@@ -568,7 +612,6 @@ pre {
   box-shadow: 5px 5px 15px #6b5545; }
 
 .article {
-  transition: all .3s linear;
   position: relative;
   left: 0;
   top: 0;
@@ -577,7 +620,9 @@ pre {
   background: #f2efe8;
   border-radius: 1rem;
   box-shadow: 0 0 15px #6b5545;
-  border: 1px solid #dcd9d4; }
+  border: 1px solid #dcd9d4;
+  word-wrap: break-word;
+  word-break: break-word; }
   .article .article-img, .article img {
     max-width: 100%;
     vertical-align: middle;
@@ -673,7 +718,7 @@ blockquote {
   padding: 10px 20px;
   font: italic 500 0.95em -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   color: gray; }
-  blockquote:before, blockquote.main:after, blockquote.container:after, blockquote.row:after, blockquote.footer:after, blockquote.article:after, blockquote.article-body:after {
+  blockquote:before, blockquote.main:after, blockquote.container:after, blockquote.row:after, blockquote.footer:after, .zxd-navbar > blockquote.navbar-header:after, blockquote.article:after, blockquote.article-body:after {
     content: " \"";
     position: relative;
     left: -15px;
@@ -735,23 +780,26 @@ table {
     border-color: #6b5545; }
 
 .tagcloud {
+  text-align: center; }
+
+.tagcloud-item {
   display: inline-block;
   margin-right: 20px;
   vertical-align: middle;
   text-align: center; }
-  .tagcloud .article-title {
+  .tagcloud-item .article-title {
     margin: 20px auto;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
-  .tagcloud .article {
-    width: 200px;
+  .tagcloud-item .article {
+    width: 150px;
     height: 150px; }
-  .tagcloud .article-body {
+  .tagcloud-item .article-body {
     border-top: 1px solid #dcd9d4; }
-  .tagcloud h1, .tagcloud h4 {
+  .tagcloud-item h1, .tagcloud-item h4 {
     line-height: 50px; }
-  .tagcloud span {
+  .tagcloud-item span {
     width: 50%;
     position: absolute;
     bottom: 10px;
