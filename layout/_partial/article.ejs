@@ -20,12 +20,13 @@
         <% }) %>
         <% } %>
       </div>
-
-      <% if(article.excerpt){ %>
       <div class="article-body">
+      <% if(article.excerpt){ %>
         <%- article.excerpt %>
+      <% } else{%>
+        <%- article.content %>
+      <%}%>
       </div>
-      <% } %>
       <% if(article.tags.length){ %>
       <div class="article-footer">
         <% article.tags.forEach(function(tag){ %>

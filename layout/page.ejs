@@ -11,8 +11,8 @@
           <% }else { %>
           <% site.tags.each(function(tag){ %>
           <a class="tagcloud-item" href="<%- url_for(tag.path) %>">
-            <div class="article animation ">
-              <h3 class="article-title"><%- tag.name %></h3>
+            <div class="article animation" title="<%- tag.name%>">
+              <h3 class="article-title" ><%- tag.name %></h3>
               <div class="article-body">
                 <% if(tag.length == 1){ %>
                 <h4><%- tag.length %></h4>
@@ -33,11 +33,11 @@
       <section class="col-xs-12 col-md-10 col-md-offset-1">
         <div class="tagcloud">
           <% if(site.categories.length == 0){ %>
-          <h3 style="text-align:center;margin-top:100px"><%- __('nothing') %></h3>
+          <h3 ><%- __('nothing') %></h3>
           <% }else{ %>
           <% site.categories.each(function(category){ %>
           <a class="tagcloud-item" href="<%- url_for(category.path) %>">
-            <div class="article animation ">
+            <div class="article animation " title="<%- category.name%>">
               <h3 class="article-title"><%- category.name %></h3>
               <div class="article-body">
                 <% if(category.length == 1){ %>

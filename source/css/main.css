@@ -55,7 +55,7 @@ body {
   font-size: 1rem;
   line-height: 1.4;
   color: #6b5545;
-  background-color: #fff;
+  background-color: #eee;
   height: 100%; }
 
 p {
@@ -461,7 +461,7 @@ th {
   .hidden-lg {
     display: none; } }
 .animation {
-  transition: all 1s; }
+  transition: all .5s; }
 
 .animation-rocket {
   transition: bottom 1s ease-out; }
@@ -622,11 +622,11 @@ pre {
   box-shadow: 0 0 15px #6b5545;
   border: 1px solid #dcd9d4;
   word-wrap: break-word;
-  word-break: break-word; }
+  word-break: break-all; }
   .article .article-img, .article img {
     max-width: 100%;
-    vertical-align: middle;
-    margin: 5px auto; }
+    margin: 5px auto;
+    vertical-align: middle; }
 
 .article-header {
   display: block;
@@ -683,7 +683,7 @@ pre {
       color: #3f373c;
       background: #dcd9d4; }
     .paginator .page-number.current {
-      background: #fff;
+      background: #eee;
       color: #6b5545; }
 
 .highlight, pre {
