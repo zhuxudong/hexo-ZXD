@@ -40,6 +40,8 @@
     }
 
     > .navbar-toggle {
+        // for the iphone6
+      color:$cat-lighter ;
       float: right;
       @media (min-width: 768px) {
         display: none;
@@ -52,7 +54,7 @@
     height: 2px;
     border-width: 1px;
     border-style: solid;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   > .navbar-collapse {
@@ -83,7 +85,5 @@
 
 }
 
-@media screen and(max-width: 992px) {
 
-}
 

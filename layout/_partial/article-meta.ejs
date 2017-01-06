@@ -20,7 +20,9 @@
   <script>
       var audio = document.querySelector("#music");
       audio.oncanplay = function () {
-          audio.play();
+          $(document).bind("touchstart",function(){
+              audio.play();
+          })
       }
       audio.onended = function () {
           audio.getAttribute("src") == "/music/about-1.mp3" ?

@@ -39,7 +39,6 @@ h6, .h6 {
 html {
   box-sizing: border-box;
   font-size: $font-size-root;
-  height: 100%;
 }
 
 *,
@@ -51,11 +50,9 @@ html {
 body {
   margin: 0;
   font-family: $font-family-base;
-  font-size: $font-size-base;
   line-height: $line-height-base;
   color: $body-color;
   background-color: $body-bg;
-  height: 100%;
 }
 
 p {
