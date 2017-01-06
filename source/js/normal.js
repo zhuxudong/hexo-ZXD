@@ -1,57 +1,61 @@
 /**
  * Created by Administrator on 2017/1/1.
  */
-
-$(function () {
-    $(document.body).removeClass("fade");
-    $(".zxd-navbar a").addClass("animation");
-
-    //start rocket to top
-    (function () {
-        //set the state for keeping on rocket
-        var rocketState = "end";
-        var $rocket = $("#rocket");
-        $rocket.click(function () {
-            rocketState = "ing";
-            var index = 0;
-            var scrollTop = $(document).scrollTop();
-            $rocket.addClass("rocketTop");
-            setTimeout(scroll, 20);
-            //closure
-            function scroll() {
-                $(document).scrollTop(scrollTop - scrollTop / 40 * (++index));
-                if (index != 40) {
-                    setTimeout(scroll, 20);
-                } else {
-                    rocketState = "end";
-                }
+$.zxdRocket = function () {
+    var rocketState = "end";
+    var $rocket = $("#rocket");
+    var $zxdNavbar = $(".zxd-navbar");
+    var scrollTop = $(document).scrollTop();
+    $rocket.click(function () {
+        rocketState = "ing";
+        var index = 0;
+        var scrollTop = $(document).scrollTop();
+        $rocket.addClass("rocketTop");
+        setTimeout(scroll, 20);
+        //closure
+        function scroll() {
+            $(document).scrollTop(scrollTop - scrollTop / 40 * (++index));
+            if (index != 40) {
+                setTimeout(scroll, 20);
+            } else {
+                rocketState = "end";
             }
+        }
 
-            return false;
-        });
-        $(document).on("scroll", function () {
-            if (rocketState == "end" && $(document).scrollTop() < $(window).height()) {
-                $rocket.addClass("hide").removeClass("rocketTop");
-            }
-            else {
-                $rocket.removeClass("hide");
-                $(document).height() - $(window).height() - $(document).scrollTop() < 44 ?
-                    $rocket.addClass("color-white") : $rocket.removeClass("color-white");
-            }
-        })
-    })();
-    //end rocket to top
-
-    //start translate sidebar
+        return false;
+    });
+    $(document).on("scroll", function () {
+        var scrollTopNow = $(document).scrollTop();
+        //rocket 是否隐藏，是否变色
+        if (rocketState == "end" && scrollTopNow < $(window).height()) {
+            $rocket.addClass("hide").removeClass("rocketTop");
+        }
+        else {
+            //火箭是否在底部，如果在底部，需要将火箭变成白色
+            $rocket.removeClass("hide");
+            $(document).height() - $(window).height() - scrollTopNow < 44 ?
+                $rocket.addClass("color-white") : $rocket.removeClass("color-white");
+        }
+        //如果滚轮上滑，顶部菜单栏弹出，提示用户
+        if (scrollTopNow < scrollTop&&scrollTop>300) {
+            $zxdNavbar.addClass("zxd-navbar-pop");
+            scrollTop = scrollTopNow;
+        }
+        else {
+            $zxdNavbar.hasClass("zxd-navbar-pop") ? $zxdNavbar.removeClass("zxd-navbar-pop"):0;
+            scrollTop = scrollTopNow;
+        }
+    })
+};
+$.zxdSidebar = function () {
     $("#sidebarToggle").click(function () {
         $(document.body).toggleClass("noscroll");
         $(this).addClass("animation").toggleClass("rotate color-white");
         $("#sidebar").addClass("animation").toggleClass("translateX");
         return false;
     });
-    //end translate sidebar
-
-    // start pop navbar-collapse
+}
+$.zxdNavMenu = function () {
     $("#navbarToggle").click(function () {
         var $collapse = $("#navbarCollapse");
         if ($collapse.hasClass("collapse-xs")) {
@@ -70,7 +74,12 @@ $(function () {
         }
         return false;
     });
-    //end pop navbar-collapse
+}
+$(function () {
+    $(document.body).removeClass("fade");
+    $(".zxd-navbar a").addClass("animation");
+    $.zxdRocket();
+    $.zxdSidebar();
+    $.zxdNavMenu();
 });
-
 

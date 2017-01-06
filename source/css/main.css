@@ -497,7 +497,23 @@ th {
   bottom: 100%; }
 
 .color-white {
-  color: #f2efe8; }
+  color: #f2efe8 !important; }
+
+.zxd-navbar-pop {
+  position: fixed !important;
+  pointer-events: none;
+  background: rgba(63, 55, 60, 0.7) !important; }
+  .zxd-navbar-pop .navbar-collapse, .zxd-navbar-pop .navbar-brand, .zxd-navbar-pop .navbar-toggle {
+    pointer-events: auto; }
+  .zxd-navbar-pop .navbar-toggle {
+    color: #f2efe8 !important; }
+  @media (max-width: 767px) {
+    .zxd-navbar-pop .navbar-collapse a {
+      background: rgba(63, 55, 60, 0.7) !important;
+      color: #f2efe8 !important; }
+      .zxd-navbar-pop .navbar-collapse a:hover {
+        background: #f2efe8 !important;
+        color: #3f373c !important; } }
 
 code,
 kbd,
@@ -534,7 +550,9 @@ pre {
 
 .footer {
   margin-top: 25px;
-  padding: 10px 0 10px; }
+  padding: 10px 0 10px;
+  position: relative;
+  z-index: 1; }
   .footer span {
     margin-right: 1em; }
   .footer a:hover {
@@ -551,6 +569,7 @@ pre {
 
 .zxd-navbar {
   position: absolute;
+  z-index: 1;
   top: 0;
   width: 100%;
   padding: 0 15px; }
@@ -596,7 +615,7 @@ pre {
         border-radius: 10px; }
         .zxd-navbar > .navbar-collapse a {
           display: block;
-          padding: 6px 15px;
+          padding: 10px 15px;
           text-align: center;
           overflow: hidden;
           white-space: nowrap;
@@ -621,6 +640,7 @@ pre {
   border-radius: 1rem;
   box-shadow: 0 0 15px #6b5545;
   border: 1px solid #dcd9d4;
+  overflow: hidden;
   word-wrap: break-word;
   word-break: break-all; }
   .article .article-img, .article img {
@@ -689,7 +709,9 @@ pre {
 .highlight, pre {
   margin: 0 0 1em 0;
   background: #2b2b2b;
-  overflow: auto; }
+  overflow: auto;
+  word-break: normal;
+  word-wrap: normal; }
   .highlight td, pre td {
     border: none;
     padding: 0; }
@@ -818,6 +840,7 @@ table {
       border-color: #bda492; }
 
 #rocket {
+  color: #3f373c;
   position: fixed;
   right: 5px;
   transform: rotate(-45deg);
@@ -828,20 +851,23 @@ table {
   right: 5px;
   top: 50%;
   margin-top: -0.5em;
-  z-index: 1;
+  z-index: 100;
   font-weight: bold;
   text-shadow: 5px 5px 5px #3f373c;
   background: none; }
 
 .zxd-sidebar {
+  z-index: 1;
   position: fixed;
-  overflow: auto;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   padding: 20px 10px;
-  text-align: center; }
+  text-align: center;
+  overflow: auto;
+  word-wrap: break-word;
+  word-break: break-all; }
   .zxd-sidebar .intro .author {
     font-weight: 800; }
   .zxd-sidebar .intro img {

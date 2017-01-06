@@ -2,6 +2,8 @@
   @extend %clearfix;
   margin-top:25px;
   padding:10px 0 10px;
+  position:relative;
+  z-index:1;
   span{margin-right:1em;}
     a:hover { text-decoration: underline;}
 

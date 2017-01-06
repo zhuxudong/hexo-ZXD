@@ -15,6 +15,7 @@
   border-radius: $border-radius-base;
   box-shadow: 0 0 15px $cat-dark;
   border: $border-width-base solid $border-color-meta;
+  overflow:hidden;
   word-wrap:break-word;
   word-break:break-all;
 
@@ -113,6 +114,9 @@
   margin: 0 0 1em 0;
   background: $code-bg;
   overflow: auto;
+  //for iphone6 pre code
+  word-break: normal;
+  word-wrap: normal;
   td{vertical-align:top;}
   .gutter pre {
     text-align: center;

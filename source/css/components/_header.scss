@@ -11,10 +11,10 @@
 
 .zxd-navbar {
   position: absolute;
+  z-index:1;
   top: 0;
   width: 100%;
   padding: 0 15px;
-
   a {
     display: inline-block;
     padding: 15px 15px;
@@ -67,7 +67,7 @@
       border-radius: 10px;
       a {
         display: block;
-        padding: 6px 15px;
+        padding: 10px 15px;
         text-align: center;
         overflow: hidden;
         white-space: nowrap;

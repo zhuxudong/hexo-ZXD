@@ -24,7 +24,7 @@
       <% if(article.excerpt){ %>
         <%- article.excerpt %>
       <% } else{%>
-        <%- article.content %>
+
       <%}%>
       </div>
       <% if(article.tags.length){ %>
@@ -57,6 +57,7 @@
         <h1 class="article-title">
           <%- page.title %>
         </h1>
+
         <div class="wrapper">
           <%- partial("_partial/article-meta", {article: page}) %>
         </div>

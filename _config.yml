@@ -3,10 +3,10 @@ language: en
 keywords: hexo-ZXD
 # main menu navigation
 
-#所有评论的总开关，单个文章开关请在文章中设置
+#所有评论的总开关，关掉将不会有评论，单个文章开关请在文章中设置
 commets: true
 
-#如果需要开启有言，输入您的有言ID
+#如果需要开启有言，输入您的有言ID,请不要输入我的ID，不然我能读取你的评论记录
 youyanid: 2123180
 
 menu:
@@ -17,6 +17,7 @@ menu:
   about: about/
   # 如果你想自定义页面，可以在这里加上你的path，然后hexo new page
   # custom: custom/
+  # 不推荐超过4个，在手机下会隐藏多余的，需要修改的话，把navbar-collapse的a设置成{padding:5 15px};
 
 # Miscelaneous
 favicon: favicon.ico

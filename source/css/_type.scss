@@ -108,5 +108,28 @@
 
 //color
 .color-white {
-  color: $cat-lighter;
+  color: $cat-lighter !important;
+}
+
+.zxd-navbar-pop{
+  position:fixed !important;
+  pointer-events: none;
+  background:rgba(63, 55, 60,.7) !important;
+  .navbar-collapse,.navbar-brand,.navbar-toggle{
+    pointer-events:auto;
+  }
+  .navbar-toggle{
+    // for the iphone6
+    color:$cat-lighter !important;
+  }
+  .navbar-collapse a {
+    @media (max-width: 767px) {
+      background: rgba(63, 55, 60, .7) !important;
+      color: $cat-lighter !important;
+      &:hover {
+        background: $cat-lighter !important;
+        color: $cat-darker !important;
+      }
+    }
+  }
 }
