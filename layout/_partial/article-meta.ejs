@@ -16,14 +16,9 @@
 <% } %>
 <div class="article-meta">
   <% if(page.type == "about"){ %>
-  <audio src="/music/about-1.mp3" id="music" controls></audio>
+  <audio src="/music/about-1.mp3" id="music" controls autoplay="true"></audio>
   <script>
       var audio = document.querySelector("#music");
-      audio.oncanplay = function () {
-          $(document).bind("touchstart",function(){
-              audio.play();
-          })
-      }
       audio.onended = function () {
           audio.getAttribute("src") == "/music/about-1.mp3" ?
               audio.setAttribute("src", "/music/about-2.mp3") :

@@ -50,10 +50,26 @@ $.zxdRocket = function () {
 $.zxdSidebar = function () {
     $("#sidebarToggle").click(function () {
         $(document.body).toggleClass("noscroll");
-        $(this).addClass("animation").toggleClass("rotate color-white");
-        $("#sidebar").addClass("animation").toggleClass("translateX");
+        $(this).toggleClass("rotate color-white");
+        $("#sidebar").toggleClass("translateX");
         return false;
     });
+    //手机端滑屏
+    var pageX=0;
+    $(document).bind("touchstart",function(e){
+        pageX= e.changedTouches[0].pageX;
+    }).bind("touchend",function(e){
+        if(e.changedTouches[0].pageX- pageX<-100&& $("#sidebar").hasClass("translateX")){
+            $(document.body).addClass("noscroll");
+            $("#sidebarToggle").addClass("rotate color-white");
+            $("#sidebar").removeClass("translateX");
+        }
+        else if(e.changedTouches[0].pageX- pageX>100&& !$("#sidebar").hasClass("translateX")){
+            $(document.body).removeClass("noscroll");
+            $("#sidebarToggle").removeClass("rotate color-white");
+            $("#sidebar").addClass("translateX");
+        }
+    })
 }
 $.zxdNavMenu = function () {
     $("#navbarToggle").click(function () {
@@ -77,7 +93,7 @@ $.zxdNavMenu = function () {
 }
 $(function () {
     $(document.body).removeClass("fade");
-    $(".zxd-navbar a").addClass("animation");
+    $(".zxd-navbar a").add("#sidebar").add("#sidebarToggle").addClass("animation");
     $.zxdRocket();
     $.zxdSidebar();
     $.zxdNavMenu();
