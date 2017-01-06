@@ -5,6 +5,7 @@ $gray:                #818a91 !default;
 $gray-light:              #eceeef !default;
 $gray-lighter:             #f7f7f9 !default;
 
+//bootstrap样式，暂时还没用到
 $brand-primary:             #0275d8 !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
@@ -34,9 +35,8 @@ $headings-color:         inherit !default;
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
-
-$font-family-sidebar:    -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+$font-family-base:       "Classic Grotesque W01", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, "Hiragino Sans GB", "PingFang SC", "Heiti SC", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans", sans-serif;
+$font-family-en:          comic sans MS,Segoe UI,Helvetica Neue;
 $font-family-code:       $font-family-monospace;
 
 //size
@@ -60,15 +60,15 @@ $border-color-meta:       $cat-light;
 
 
 //body
-
-$body-bg:    #eee !default;
-$body-color: $cat-dark !default;
+//这个组合比较柔和
+$body-bg:    $gray-light !default;
+$body-color: $gray-dark !default;
 
 
 // Links
-$link-color:            $cat-darker!default;
+$link-color:            $cat !default;
 $link-decoration:       none !default;
-$link-hover-color:      $cat  !default;
+$link-hover-color:      $cat-darker  !default;
 $link-hover-decoration: none !default;
 
 //sidebar

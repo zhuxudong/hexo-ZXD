@@ -1,7 +1,6 @@
 .sidebarstyle{
   background: $sidebar-bg;
   color: $sidebar-color;
-  font-family: $font-family-sidebar;
   a{
     color:$sidebar-link-color;
     border-color: $sidebar-link-color;
@@ -29,7 +28,7 @@
   font-weight:bold;
   text-shadow:5px 5px 5px $cat-darker;
   background:none;
-
+  color:$cat-darker;
 }
 
 .zxd-sidebar {
@@ -45,8 +44,10 @@
   word-wrap:break-word;
   word-break: break-all;
   .intro {
+    font-size:$font-size-lg;
     .author{
-      font-weight:800;
+      font-weight:700;
+      font-family:Arial;
     }
     img {
       max-width: 50%;
@@ -54,6 +55,7 @@
     span {
       margin-bottom: 1em;
       display: block;
+      font-family:$font-family-en;
     }
   }
 
@@ -74,10 +76,12 @@
       display:inline-block;
       padding:0 15px;
       margin:0 1rem 1rem 1rem;
+      vertical-align: middle;
       line-height:30px;
       border-width:1.5px;
       border-style:solid;
       border-radius: $border-radius-base;
+      font-family:$font-family-en;
     }
   }
 }

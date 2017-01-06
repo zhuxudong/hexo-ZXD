@@ -1,3 +1,20 @@
+<% if(page.type == "about"){ %>
+<div class="article-meta">
+  <audio src="/music/about-1.mp3" id="music" controls autoplay="true"></audio>
+  <script>
+      var audio = document.querySelector("#music");
+      audio.onended = function () {
+          audio.getAttribute("src") == "/music/about-1.mp3" ?
+              audio.setAttribute("src", "/music/about-2.mp3") :
+              audio.setAttribute("src", "/music/about-1.mp3");
+          audio.play();
+      }
+  </script>
+</div>
+<div class="music">
+  <img src="/img/five.jpg" alt="如果我们不曾相遇~~~" class="music-item">
+</div>
+<% } else { %>
 <div class="article-meta">
   <span class="fa fa-calendar"></span>
   <%- __('postedBy') %>
@@ -14,17 +31,4 @@
   </time>
 </div>
 <% } %>
-<div class="article-meta">
-  <% if(page.type == "about"){ %>
-  <audio src="/music/about-1.mp3" id="music" controls autoplay="true"></audio>
-  <script>
-      var audio = document.querySelector("#music");
-      audio.onended = function () {
-          audio.getAttribute("src") == "/music/about-1.mp3" ?
-              audio.setAttribute("src", "/music/about-2.mp3") :
-              audio.setAttribute("src", "/music/about-1.mp3");
-          audio.play();
-      }
-  </script>
-  <% } %>
-</div>
+<% } %>

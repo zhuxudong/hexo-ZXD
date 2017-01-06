@@ -38,7 +38,10 @@
     display: inline-block;
     text-align: left;
   }
-  .article-meta{display:block;}
+  .article-meta{
+    display:block;
+    font-family:$font-family-en;
+  }
 }
 
 .article-body {
@@ -148,8 +151,8 @@
 blockquote {
   margin: 20px 0;
   padding: 10px 20px;
-  font: italic 500 .95em $font-family-sidebar;
-  color: gray;
+  font: italic 500 .95em $font-family-base;
+  color: $gray;
   &:before{
     content:" \"";
     position:relative;
@@ -157,9 +160,7 @@ blockquote {
     font-size:2em;
   }
 }
-em {
-  font-family:$font-family-sidebar;
-}
+
 
 table{
   border-collapse: collapse;

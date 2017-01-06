@@ -106,6 +106,22 @@
   bottom: 100%;
 }
 
+@keyframes music {
+  from{
+    transform:rotate(0);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+.music{
+  text-align:center !important;
+  .music-item{
+    border-radius:150px;
+    animation:music 10s linear 2s infinite;
+  }
+}
+
 //color
 .color-white {
   color: $cat-lighter !important;
