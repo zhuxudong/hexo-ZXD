@@ -19,8 +19,7 @@ PC
 平板
 ![markdown](http://zhuxudong.cn/img/markdown-2.png)
 手机
-![markdown](http://zhuxudong.cn/img/markdown-3.png)
-![markdown](http://zhuxudong.cn/img/markdown-4.png)
+![markdown](http://zhuxudong.cn/img/markdown-3.png) ![markdown](http://zhuxudong.cn/img/markdown-4.png)
 ### hexo-ZXD的完整front-matter
 * layout	布局，一般不用设置，默认post布局
 * title	标题，这个必须设置，会影响header和index的显示	
