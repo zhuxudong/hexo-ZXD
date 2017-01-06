@@ -48,10 +48,13 @@ $.zxdRocket = function () {
     })
 };
 $.zxdSidebar = function () {
-    $("#sidebarToggle").click(function () {
+    function toggleSidebar(){
         $(document.body).toggleClass("noscroll");
-        $(this).toggleClass("rotate color-white");
+        $("#sidebarToggle").toggleClass("rotate color-white");
         $("#sidebar").toggleClass("translateX");
+    }
+    $("#sidebarToggle").click(function () {
+      toggleSidebar();
         return false;
     });
     //手机端滑屏
@@ -60,17 +63,17 @@ $.zxdSidebar = function () {
         pageX= e.changedTouches[0].pageX;
     }).bind("touchend",function(e){
         if(e.changedTouches[0].pageX- pageX<-100&& $("#sidebar").hasClass("translateX")){
-            $(document.body).addClass("noscroll");
-            $("#sidebarToggle").addClass("rotate color-white");
-            $("#sidebar").removeClass("translateX");
+            toggleSidebar();
         }
         else if(e.changedTouches[0].pageX- pageX>100&& !$("#sidebar").hasClass("translateX")){
-            $(document.body).removeClass("noscroll");
-            $("#sidebarToggle").removeClass("rotate color-white");
-            $("#sidebar").addClass("translateX");
+           toggleSidebar();
         }
+    });
+    //代码段不能滑屏
+    $("pre,code,.line").bind("toushstart touchend",function(){
+        return false;
     })
-}
+};
 $.zxdNavMenu = function () {
     $("#navbarToggle").click(function () {
         var $collapse = $("#navbarCollapse");
