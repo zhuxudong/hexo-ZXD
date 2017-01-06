@@ -62,7 +62,6 @@
       position: absolute;
       top: 35px;
       right: 55px;
-      background: $cat-lighter;
       box-shadow: 0 0 15px $cat-lighter;
       border-radius: 10px;
       a {
@@ -72,6 +71,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        background: $cat-lighter;
         color: $cat-darker;
         &:hover {
           color: $cat-lighter;
