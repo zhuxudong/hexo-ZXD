@@ -2,7 +2,7 @@
 ***
 ## 版本0.1
 
-> hexo-ZXD第一个版本发布了...
+> hexo-ZXD 1.0版本发布了...
 
 #### [hexo-ZXD介绍](http://zhuxudong.cn/2017/01/05/hexo-ZXD/) 
 
