@@ -1,0 +1,20 @@
+menu:
+ home: 主页
+ archives: 归档
+ categories: 分类
+ tags: 标签
+ about: 关于我
+
+
+
+postedBy:  Posted by
+updatedBy:  Updated by
+readMore: 阅读更多
+
+archives:
+ er: er...我还没有心思写东西
+ all: 我一共写了 %s 篇文章...
+ latest: 最近文章...
+
+posts: 文章
+nothing: er... 这里还没有东西
