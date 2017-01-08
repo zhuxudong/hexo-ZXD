@@ -42,7 +42,6 @@ copyright: ture
 #if you want open the updated timemeta in post,you can change it to 'true'
 updated: false
 
-
 #the file rootpath
 img: /img
 js: /js

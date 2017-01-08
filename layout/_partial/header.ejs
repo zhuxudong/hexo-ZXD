@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
       </a>
     </div>
-    <div class=" navbar-collapse collapse-xs noscroll " id="navbarCollapse">
+    <div class=" navbar-collapse  collapse-xs noscroll " id="navbarCollapse">
           <% for(var menuName in theme.menu){ %>
           <a   href="<%- url_for(theme.menu[menuName]) %>"><%= __('menu.'+menuName) %> </a>
           <% } %>

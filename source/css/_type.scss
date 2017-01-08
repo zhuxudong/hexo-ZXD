@@ -59,7 +59,8 @@
 
 //animation
 .animation {
-  transition: all .5s;
+  transition-property: left,top,color,opacity,background ;
+  transition-duration: .5s;
 }
 
 .animation-rocket {
@@ -73,7 +74,7 @@
 }
 
 .fade {
-  opacity: 0;
+  opacity: 0.5;
 }
 
 .hide {
@@ -91,8 +92,10 @@
 }
 
 .translateX {
-  transform: translateX(100%);
+  //transform: translateX(100%);
+  left:100% !important;//lt IE 10
 }
+
 
 .noscroll {
   overflow: hidden;
