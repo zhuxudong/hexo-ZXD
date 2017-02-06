@@ -49,6 +49,12 @@
   display:block;
   margin-bottom:10px;
   @extend %clearfix;
+  ul{
+  padding:20px;
+  }
+  h3{
+  font-weight:bold;
+  }
 }
 
 .article-footer {
